@@ -30,14 +30,14 @@ ALLOWED_HOSTS = ['*']
 
 # Application definition
 
-DEFAULT_APPS = [
+DEFAULT_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-]
+)
 
 THIRD_PARTY_APPS=(
     'rest_framework',
@@ -49,7 +49,7 @@ LOCAL_APPS=(
 
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
-AUTH_USER_MODEL = 'accounts.User' #changes built-in user model to custom user model
+AUTH_USER_MODEL = 'baseapp.User'  # changes built-in user model to custom user model
 
 # logger setup
 LOGGING = {
@@ -81,7 +81,7 @@ LOGGING = {
             'level': 'INFO',
             'formatter': 'simple',
             'class': 'logging.FileHandler',
-            'filename': '/var/log/app/idare.log',
+            'filename': 'office-lunch.log',
         },
     },
     'loggers': {
